@@ -1,0 +1,99 @@
+/* Variaveis de cores e texto */
+:root {
+    --cor-primaria: blue;
+    --cor-secundaria: rgb(167, 71, 71);
+    --cor-fundo: #908a76;
+
+    --fonte-primaria: 'SuperMario256';
+    --tamanho-fonte-titulo: 24px;
+    --cor-texto: #070606;
+}
+
+@font-face{
+    font-family: 'SuperMario256';
+    src: url('super_mario_256/SuperMario256.ttf') format('opentype');
+}
+   
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    text-align: center;
+}
+
+header {
+    background-color: var(--cor-secundaria);
+    padding: 16px;
+    font-family: 'SuperMario256';
+}
+
+header h1 strong {
+    color: var(--cor-primaria);
+    font-family: 'SuperMario256';
+    /* Borda entre letras */
+    -webkit-text-stroke: 0.5px var(--cor-fundo);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    margin: 5%;
+}
+
+header nav ul li a{
+    color: var(--cor-texto);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav ul li a:hover{
+    color: var(--cor-fundo);
+}
+
+main {
+    padding: 5%;
+    width: 85%;
+    margin: auto;
+}
+
+article h2{
+    margin: 16px 0px 8px 0px;
+    font-family: 'SuperMario256';
+}
+
+article h3{
+    margin: 16px 0px 8px 0px;
+    font-family: 'SuperMario256';
+}
+
+article p{
+    width: 80%;
+    margin: auto;
+}
+
+main section article figure{
+    border: 2px solid var(--cor-texto);
+    width: 300px; 
+    margin: auto;
+    height: auto; 
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+main section article figure img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+figure:hover img{
+    transform: scale(1.2); /*Aplica o efeito de zoom ao passar o mouse (aumenta o tamanho em 20%) na imagem dentro da figura*/
+}
